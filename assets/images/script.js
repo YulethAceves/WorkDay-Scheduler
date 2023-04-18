@@ -29,13 +29,19 @@ var hours = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 for (var i = 0; i < hours.length; i++) {
     setColor(hours[i]);
 }
-
-// Click on timeblock to enter an event (text)
 // Click on timeblock to enter an event (textarea)
 // Save buttons feature icons from Font Awesome (css)
 // Click on save button to save text to local storage
+
+function saveBlock(id) {
+    var blockContent = $("#" + id).val();
+
+    localStorage.setItem("blockContent" + id, blockContent);
+}
 
 
 // Saved events persist when page is refreshed
 
 // Bonus: Add timer to refresh page periodically (for accurate color blocks)
+// Bonus: Add timer to refresh page periodically (for accurate color blocks)
+// Bonus: Responsive Sizing
